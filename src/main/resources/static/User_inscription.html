@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AskaCar</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <figure class="image is-2by1">
+        <img src="circuit.jpg">
+        <section class="section">
+            <div class="container">
+                <h1 class="title">
+                    ASKACAR
+                </h1>
+                <p class="subtitle">
+                    Ask and take your <strong>car</strong> !
+                </p>
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input class="input" type="text">
+                    </div>
+                </div>
+
+                <form class="formulaire">
+
+
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input is-danger" type="email" placeholder="Email input" value="hello@domain.com">
+                            <span class="icon is-small is-left">
+      <i class="fa fa-envelope"></i>
+    </span>
+                            <span class="icon is-small is-right">
+      <i class="fa fa-warning"></i>
+    </span>
+                        </div>
+
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Age</label>
+                        <div class="control">
+                            <div class="select">
+                                <select>
+        <option>23</option>
+        <option>24</option>
+        <option>25</option>
+        <option>26</option>
+        <option>27</option>
+        <option>28</option>
+        <option>29</option>
+        <option>30</option>
+        <option>31</option>
+        <option>32</option>
+        <option>33</option>
+        <option>34</option>
+        <option>35</option>
+        <option>36</option>
+        <option>37</option>
+        <option>38</option>
+        <option>39</option>
+        <option>40</option>
+        <option>41</option>
+      </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="field">
+                        <div class="control">
+                            <label class="checkbox">
+      <input type="checkbox">
+      I agree to the <a href="#">terms and conditions</a>
+    </label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+
+                            <label class="radio">
+                                Driver Licence
+      <input type="radio" name="question">
+      Yes
+    </label>
+                            <label class="radio">
+      <input type="radio" name="question">
+      No
+    </label>
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-link" type="submit" onclick="ValidateEmail(document.form1.text1)">Let's Go</button>
+                        </div>
+                        <div class="control">
+                            <button class="button is-text">Cancel</button>
+                        </div>
+                    </div>
+
+
+                </form>
+
+                <style>
+                    .title {
+                        font-size: 6rem;
+                        color: beige;
+                    }
+                    
+                    .subtitle {
+                        font-size: 3rem;
+                        color: blanchedalmond;
+                    }
+                    
+                    .section {
+                        padding: 5rem 3.5rem;
+                        margin: -45rem -6rem;
+                    }
+                    
+                    .formulaire,
+                    .label {
+                        color: beige;
+                    }
+
+                </style>
+            </div>
+        </section>
+    </figure>
+    <script>
+        function ValidateEmail(inputText) {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (inputText.value.match(mailformat)) {
+                document.form1.text1.focus();
+                return true;
+            } else {
+                alert("You have entered an invalid email address!");
+                document.form1.text1.focus();
+                return false;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
